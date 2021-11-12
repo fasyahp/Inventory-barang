@@ -29,27 +29,27 @@ for ($i=2; $i<=$jumlah_baris; $i++){
 		mysqli_query($koneksi,"INSERT into header_opb (`opb_no`, `deperteman`, `kebutuhan`, `cost_center`, `gl_account`, `refferensi`) 
 		values('$opb_no','$deperteman', '$kebutuhan', '$cost_center', '$gl_account', '$refferensi' )");
 		$berhasil++;
-	} else if ($opb_no == "") {
+	} else if (!$opb_no) {
 		mysqli_query($koneksi,"INSERT into header_opb (`opb_no`, `deperteman`, `kebutuhan`, `cost_center`, `gl_account`, `refferensi`) 
 		values('-','$deperteman', '$kebutuhan', '$cost_center', '$gl_account', '$refferensi' )");
 		$berhasil++;
-	} else if ($deperteman == "" ) {
+	} else if (!$deperteman ) {
 		mysqli_query($koneksi,"INSERT into header_opb (`opb_no`, `deperteman`, `kebutuhan`, `cost_center`, `gl_account`, `refferensi`) 
 		values('$opb_no','-', '$kebutuhan', '$cost_center', '$gl_account', '$refferensi' )");
 		$berhasil++;
-	} else if ($kebutuhan == "") {
+	} else if (!$kebutuhan) {
 		mysqli_query($koneksi,"INSERT into header_opb (`opb_no`, `deperteman`, `kebutuhan`, `cost_center`, `gl_account`, `refferensi`) 
 		values('$opb_no','$deperteman', '-', '$cost_center', '$gl_account', '$refferensi' )");
 		$berhasil++;
-	} else if ($cost_center == "") {
+	} else if (!$cost_center) {
 		mysqli_query($koneksi,"INSERT into header_opb (`opb_no`, `deperteman`, `kebutuhan`, `cost_center`, `gl_account`, `refferensi`) 
 		values('$opb_no','$deperteman', '$kebutuhan', '-', '$gl_account', '$refferensi' )");
 		$berhasil++;
-	} else if ($gl_account == "") {
+	} else if (!$gl_account) {
 		mysqli_query($koneksi,"INSERT into header_opb (`opb_no`, `deperteman`, `kebutuhan`, `cost_center`, `gl_account`, `refferensi`) 
 		values('$opb_no','$deperteman', '$kebutuhan', '$cost_center', '-', '$refferensi' )");
 		$berhasil++;
-	} else if ($refferensi == "") {
+	} else if (!$refferensi) {
 		mysqli_query($koneksi,"INSERT into header_opb (`opb_no`, `deperteman`, `kebutuhan`, `cost_center`, `gl_account`, `refferensi`) 
 		values('$opb_no','$deperteman', '$kebutuhan', '$cost_center', '$gl_account', '-' )");
 		$berhasil++;
